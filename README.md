@@ -15,21 +15,21 @@ The API should follow best practices in software engineering and adhere to RESTf
 Query Parameters:
 
   - `q` (optional): Search query. Search for movies with a title that contains the specified string.
-  - `genres (optional): Filter movies by genre. Accepts a comma-separated list of genres. Only movies that belong to at least one of the specified genres will be returned.
-  - `year (optional): Filter movies by release year. Accepts a single year or a range of years separated by a hyphen (e.g., 1990-1999).
-  - `page (optional): Page number. Used for pagination. Defaults to 1 if not specified.
-  - `limit (optional): Number of movies to return per page. Used for pagination. Defaults to 20 if not specified.
-  - `sort (optional): Sort order. Accepts title, year, and rating. Use a minus sign (-) prefix to sort in descending order (e.g., -title).
+  - `genres` (optional): Filter movies by genre. Accepts a comma-separated list of genres. Only movies that belong to at least one of the specified genres will be returned.
+  - `year` (optional): Filter movies by release year. Accepts a single year or a range of years separated by a hyphen (e.g., 1990-1999).
+  - `page` (optional): Page number. Used for pagination. Defaults to 1 if not specified.
+  - `limit` (optional): Number of movies to return per page. Used for pagination. Defaults to 20 if not specified.
+  - `sort` (optional): Sort order. Accepts title, year, and rating. Use a minus sign (-) prefix to sort in descending order (e.g., -title).
 
 Response:
 
   Status Code: 200 OK
   Body: An array of movie objects. Each object should include the following fields:
-  id: The movie's unique identifier.
-  title: The movie's title.
-  genres: An array of strings representing the movie's genres.
-  year: The movie's release year.
-  rating: The movie's rating (on a scale of 1 to 10).
+    `id`: The movie's unique identifier.
+    `title`: The movie's title.
+    `genres`: An array of strings representing the movie's genres.
+    `year`: The movie's release year.
+    `rating`: The movie's rating (on a scale of 1 to 10).
 
 2. Get Movie
 `GET /movies/{id}`: Retrieve a specific movie by its ID.
