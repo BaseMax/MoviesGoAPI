@@ -24,15 +24,15 @@ Query Parameters:
 Response:
 
   Status Code: 200 OK
-  Body: An array of movie objects. Each object should include the following fields:
-    `id`: The movie's unique identifier.
-    `title`: The movie's title.
-    `genres`: An array of strings representing the movie's genres.
-    `year`: The movie's release year.
-    `rating`: The movie's rating (on a scale of 1 to 10).
 
-2. Get Movie
-`GET /movies/{id}`: Retrieve a specific movie by its ID.
+  Body: An array of movie objects. Each object should include the following fields:
+   - `id`: The movie's unique identifier.
+   - `title`: The movie's title.
+   - `genres`: An array of strings representing the movie's genres.
+   - `year`: The movie's release year.
+   - `rating`: The movie's rating (on a scale of 1 to 10).
+
+2. Get Movie `GET /movies/{id}`: Retrieve a specific movie by its ID.
 
 Path Parameters:
 
@@ -41,27 +41,27 @@ Path Parameters:
 Response:
 
   Status Code: 200 OK
+
   Body: The movie object with the specified ID. The object should include the same fields as in the response for the GET /movies endpoint.
 
 
-3. Add Movie
-`POST /movies`: Add a new movie.
+3. Add Movie `POST /movies`: Add a new movie.
 
 Request Body:
 
-A JSON object representing the movie to add. The object should include the following fields:
-  `title`: The movie's title.
-  `genres`: An array of strings representing the movie's genres.
-  `year`: The movie's release year.
-  `rating`: The movie's rating (on a scale of 1 to 10).
+  A JSON object representing the movie to add. The object should include the following fields:
+   - `title`: The movie's title.
+   -  `genres`: An array of strings representing the movie's genres.
+   -  `year`: The movie's release year.
+   -  `rating`: The movie's rating (on a scale of 1 to 10).
 
 Response:
 
   Status Code: 201 Created
+  
   Body: The movie object representing the newly added movie. The object should include the same fields as in the response for the GET /movies endpoint.
 
-4. Update Movie
-`PUT /movies/{id}`: Update an existing movie by its ID.
+4. Update Movie `PUT /movies/{id}`: Update an existing movie by its ID.
 
 Path Parameters:
 
@@ -69,19 +69,19 @@ Path Parameters:
 
 Request Body:
 
-A JSON object representing the movie to update. The object should include the following fields:
-  `title`: The movie's new title (optional).
-  `genres`: An array of strings representing the movie's new genres (optional).
-  `year`: The movie's new release year (optional).
-  `rating`: The movie's new rating (on a scale of 1 to 10) (optional).
+  A JSON object representing the movie to update. The object should include the following fields:
+    - `title`: The movie's new title (optional).
+    - `genres`: An array of strings representing the movie's new genres (optional).
+    - `year`: The movie's new release year (optional).
+    - `rating`: The movie's new rating (on a scale of 1 to 10) (optional).
 
 Response:
 
   Status Code: 200 OK
+
   Body: The updated movie object. The object should include the same fields as in the response for the GET /movies endpoint.
 
-5. Delete Movie
-`DELETE /movies/{id}`: Delete a movie by its ID.
+5. Delete Movie `DELETE /movies/{id}`: Delete a movie by its ID.
 
 Path Parameters:
 
