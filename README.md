@@ -19,7 +19,7 @@ Your solution should include the following:
 - Unit tests for the application and any helper functions you may create.
 - You are free to use any third-party libraries or frameworks that you find useful, but you should be able to justify your choices. You should also use Git for version control and submit your solution as a Git repository.
 
-#3 Evaluation Criteria
+### Evaluation Criteria
 
 We will evaluate your solution based on the following criteria:
 
@@ -29,7 +29,7 @@ We will evaluate your solution based on the following criteria:
 - Unit test coverage and effectiveness.
 - Your ability to justify your choices of libraries and frameworks.
 
-## Submission
+### Submission
 
 Please submit your solution as a Git repository and provide us with a link to it. We will clone your repository and evaluate your solution locally. You should include a README file that explains how to build, run, and test your application.
 
