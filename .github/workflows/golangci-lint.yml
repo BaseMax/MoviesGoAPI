@@ -20,6 +20,7 @@ jobs:
       - name: Run golangci-lint
         run: golangci-lint run --timeout=5m --out-format=github-actions > golangci-lint-report.txt
       - name: Create Issue golangci-lint-report file
+        if: ${{ always() }}
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: golangci-lint report
