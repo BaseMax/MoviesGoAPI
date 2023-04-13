@@ -1,3 +1,5 @@
+[![golangci-lint](https://github.com/BaseMax/MoviesGoAPI/actions/workflows/golangci-lint.yml/badge.svg?branch=main)](https://github.com/BaseMax/MoviesGoAPI/actions/workflows/golangci-lint.yml)
+
 # Movies Go API
 
 ## Design a Movies API with Search, Filtering, Pagination, and Sorting
