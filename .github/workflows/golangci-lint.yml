@@ -25,5 +25,4 @@ jobs:
         with:
           title: 'golangci-lint report'
           content-filepath: ./golangci-lint-report.txt
-          lables: golangci-lint
   
