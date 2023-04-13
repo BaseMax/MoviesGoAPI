@@ -21,6 +21,6 @@ jobs:
       - name: Run golangci-lint and create issue on errors/warnings
         uses: 8398a7/action-golangci-lint@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GIT_TOKEN }}
           golangci-lint-flangs: run --timeout 5m --issue-exit-code=3
           working_directory: .
