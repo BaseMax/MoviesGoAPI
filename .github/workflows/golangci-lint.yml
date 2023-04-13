@@ -24,10 +24,9 @@ jobs:
         uses: peter-evans/create-issue-from-file@v2
         with:
           title: golangci-lint reports
-          body: |
-            The following issues were found by golangci-lint:
-            ```
-            $(cat golanci-lint-report.txt)
-            ```
+          content-filepath: ./golanci-lint-report.txt
+          labels: |
+            report
+            golanci-lint
         env:
           GITHUB_TOCKEN: ${{ secrets.GIT_TOCKEN }}
