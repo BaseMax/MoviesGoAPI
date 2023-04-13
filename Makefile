@@ -6,7 +6,6 @@ GOTEST=$(GOCMD) test
 GOVET=$(GOCMD) vet
 BINARY_NAME=for_dev_app
 
-
 all: test build
 
 build:
