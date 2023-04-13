@@ -18,9 +18,8 @@ jobs:
       - name: Install golangci-lint
         run: |
           sudo curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s v1.42.1
-          sudo install -m 0755 golangci-lint-*-linut-amd64 /usr/local/bin/golangci-lint
       - name: Run golangci-lint
-        run: golangci-lint run --timeout=5m --out-format=github-actions
+        run: ./bin/golangci-lint run --timeout=5m --out-format=github-actions
       - name: Creae issues for errors and warnings
         uses: peter-evans/create-issue-from-file@v2
         with:
