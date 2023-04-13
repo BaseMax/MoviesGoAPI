@@ -18,6 +18,15 @@ jobs:
       - name: Setup golangci-lint
         uses: golangci/golangci-lint-action@v3
       - name: Run golangci-lint
-        run: golangci-lint run --timeout=5m ./...
+        run: golangci-lint run --timeout=5m --out-format=github-actions ./...
+      - name: Create issue
+        uses: peter-evans/create-issue-from-file@v2
+        with:
+          title: golangci-lint reports
+          body: |
+            The following issues were found by golangci-lint:
+            ```
+            $(cat golanci-lint-report.txt)
+            ```
         env:
           GITHUB_TOCKEN: ${{ secrets.GIT_TOCKEN }}
