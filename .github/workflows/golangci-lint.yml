@@ -22,6 +22,7 @@ jobs:
       - name: Run golangci-lint
         run: golangci-lint run --timeout=5m --out-format=github-actions
       - name: Creae issues for errors and warnings
+        uses: peter-evans/create-issue-from-file@v2
         with:
           title: 'golangci-lint report'
           content-filepath: ./golangci-lint-report.txt
