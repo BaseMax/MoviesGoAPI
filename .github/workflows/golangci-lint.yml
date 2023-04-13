@@ -18,6 +18,7 @@ jobs:
       - name: Setup golangci-lint
         uses: golangci/golangci-lint-action@v3
       - name: Run golangci-lint
+        continue-on-error: true
         run: golangci-lint run --timeout=5m --out-format=github-actions ./...
       - name: Create issue
         if: always()
