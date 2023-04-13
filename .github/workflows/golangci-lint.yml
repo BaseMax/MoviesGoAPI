@@ -1,10 +1,7 @@
 name: golangci-lint
 on:
   push:
-    #tags:
-    #  - v*
     branches:
-      - master
       - main
   pull_request:
 permissions:
@@ -13,17 +10,13 @@ permissions:
   # pull-requests: read
 jobs:
   golangci:
-    strategy:
-      matrix:
-        go: [1.20]
-        os: [ubuntu-latest, macos-latest, windows-latest]
     name: lint
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-go@v4
         with:
-          go-version: ${{ matrix.go }}
+          go-version: '1.20'
           cache: false
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v3
