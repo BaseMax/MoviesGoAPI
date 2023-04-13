@@ -24,7 +24,7 @@ jobs:
         uses: peter-evans/create-issue-from-file@v4
         with:
           title: golangci-lint report
-          content-filepath: ${{ GITHUB_WORKSPACE }}/golangci-lint-report.md
+          content-filepath: ${{ github.workspace }}/golangci-lint-report.md
           labels: |
             report
             golangci-lint
