@@ -18,15 +18,6 @@ jobs:
       - name: Setup golangci-lint
         uses: golangci/golangci-lint-action@v3
       - name: Run golangci-lint
-        run: golangci-lint run --timeout=5m ./... >  golanci-lint-report.txt
-      - name: Create issue
-        if: always()
-        uses: peter-evans/create-issue-from-file@v4.0.1
-        with:
-          title: golangci-lint reports
-          content-filepath: golanci-lint-report.txt
-          labels: |
-            report
-            golanci-lint
+        run: golangci-lint run --timeout=5m ./...
         env:
           GITHUB_TOCKEN: ${{ secrets.GIT_TOCKEN }}
