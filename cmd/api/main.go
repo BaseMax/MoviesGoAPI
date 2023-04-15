@@ -11,7 +11,7 @@ import (
 
 const version = "1.0.0"
 
-// Hold all configuration settings for outr application.
+// Hold all configuration settings for our application.
 type config struct {
 	port int
 	env  string
