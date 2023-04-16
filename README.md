@@ -8,6 +8,25 @@ The API should allow clients to search for movies based on title, genre, and rel
 
 The API should follow best practices in software engineering and adhere to RESTful design principles. It should also include error handling and should be secure.
 
+## How run
+
+1. first must edit env.env file and change value MOVIES_DB_DSN to connect to postgresql database.
+
+2. then need to run migrations to create table in database with following command:
+
+```console
+migrate -path=./migrations -database=$MOVIES_DB_DSN up
+```
+
+*Note*: `$MOVIES_DB_DSN` value muse defined in shell environment. this is the same as MOVIES_DB_DSN in the `env.env` file.
+
+3. Then you can run project with following command:
+
+```console
+go run ./cmd/api
+```
+
+
 ## Endpoints
 
 1. Get Movies `GET /v1/movies`: Retrieve a list of movies. You can optionally specify query parameters to filter, paginate, and sort the results.

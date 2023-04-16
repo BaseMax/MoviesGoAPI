@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/BaseMax/MoviesGoAPI/internal/data"
+	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
@@ -37,6 +38,10 @@ type application struct {
 
 func main() {
 	var cfg config
+
+	if err := godotenv.Load("env.env"); err != nil {
+		log.Fatal("Error loading .env file")
+	}
 
 	flag.IntVar(&cfg.port, "port", 8080, "API server port")
 	flag.StringVar(&cfg.env, "env", "development", "Environment (development|staging|production)")
