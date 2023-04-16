@@ -1,6 +1,8 @@
-import requests
 import json
 import random
+import requests
+
+BASE_URL = "http://localhost:8080/"
 
 movie_titles = ["Moana", "The Lion King", "Finding Nemo", "Toy Story", "Up"]
 movie_genres = ["animation", "adventure", "comedy", "drama", "family"]
@@ -18,6 +20,6 @@ for i in range(10000):
 
     json_data = json.dumps(movie_data)
 
-    response = requests.post("http://localhost:8080/v1/movies", data=json_data)
+    response = requests.post(BASE_URL + "v1/movies", data=json_data)
 
     print(f"Request {i+1}: Response status code:", response.status_code)
