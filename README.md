@@ -100,6 +100,8 @@ Response body:
 curl localhost:8080/v1/movies/1
 ```
 
+Response body:
+
 ```json
 {
 	"movie": {
@@ -151,5 +153,30 @@ Response body
 ```json
 {
     "message": "movie successfully deleted"
+}
+```
+
+- `POST /v1/movies`
+
+```console
+BODY='{"title":"Moana","year":2016,"runtime":"107 mins", "genres":["animation","adventure"]}'
+curl -d "$BODY" localhost:4000/v1/movies
+```
+
+Response body:
+
+```json
+{
+	"movie": {
+		"id": 1,
+		"title": "Moana",
+		"year": 2016,
+		"runtime": "107 mins",
+		"genres": [
+		"animation",
+		"adventure"
+		],
+	"version": 1
+	}
 }
 ```
