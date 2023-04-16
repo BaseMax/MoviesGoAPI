@@ -18,7 +18,7 @@ The API should follow best practices in software engineering and adhere to RESTf
 migrate -path=./migrations -database=$MOVIES_DB_DSN up
 ```
 
-*Note*: `$MOVIES_DB_DSN` value muse defined in shell environment. This is the same as **MOVIES_DB_DSN** in the `env.env` file.
+*Note*: `$MOVIES_DB_DSN` value muse defined in the shell environment. This is the same as **MOVIES_DB_DSN** in the `env.env` file.
 
 3. Then you can run project with following command:
 
