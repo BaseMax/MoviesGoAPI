@@ -10,15 +10,15 @@ The API should follow best practices in software engineering and adhere to RESTf
 
 ## How run
 
-1. first must edit env.env file and change value MOVIES_DB_DSN to connect to postgresql database.
+1. First must edit `env.env` file and change value `MOVIES_DB_DSN` to connect to **postgresql** database.
 
-2. then need to run migrations to create table in database with following command:
+2. Then need to run migrations to create table in database with following command:
 
 ```console
 migrate -path=./migrations -database=$MOVIES_DB_DSN up
 ```
 
-*Note*: `$MOVIES_DB_DSN` value muse defined in shell environment. this is the same as MOVIES_DB_DSN in the `env.env` file.
+*Note*: `$MOVIES_DB_DSN` value muse defined in shell environment. This is the same as **MOVIES_DB_DSN** in the `env.env` file.
 
 3. Then you can run project with following command:
 
@@ -31,7 +31,6 @@ or you can run app in docker with following command:
 ```console
 docker compose up
 ```
-
 
 ## Endpoints
 
@@ -222,7 +221,6 @@ Response body:
 	}
 }
 ```
-
 
 - `PATCH /v1/movies/{id}`
 
