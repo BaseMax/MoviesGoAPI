@@ -1,6 +1,4 @@
-
 # Movies Go API
-
 
 ## Design a Movies API with Search, Filtering, Pagination, and Sorting
 
@@ -9,7 +7,6 @@ Your task is to design a RESTful API for a movies site that allows users to sear
 The API should allow clients to search for movies based on title, genre, and release year. It should also allow clients to filter movies based on one or more genres, and sort movies based on title, release year.
 
 The API should follow best practices in software engineering and adhere to RESTful design principles. It should also include error handling and should be secure.
-
 
 ## Endpoints
 
@@ -22,7 +19,6 @@ Query Parameters:
   - `page` (optional): Page number. Used for pagination. Defaults to 1 if not specified.
   - `page_size` (optional): Number of movies to return per page. Used for pagination. Defaults to 20 if not specified.
   - `sort` (optional): Sort order. Accepts title, year, and rating. Use a minus sign (-) prefix to sort in descending order (e.g., -year).
-
 
 Response:
 
@@ -47,7 +43,6 @@ Response:
 
   Body: The movie object with the specified ID. The object should include the same fields as in the response for the GET /movies endpoint.
 
-
 3. Add Movie `POST /v1/movies`: Add a new movie.
 
 Request Body:
@@ -63,7 +58,6 @@ Response:
   Status Code: 201 Created
 
   Body: The movie object representing the newly added movie. The object should include the same fields as in the response for the GET /movies endpoint.
-
 
 4. Update Movie `PATCH /v1/movies/{id}`: Update an existing movie by its ID.
 
@@ -85,18 +79,15 @@ Response:
 
   Body: The updated movie object. The object should include the same fields as in the response for the GET /movies endpoint.
 
-
 5. Delete Movie `DELETE /movies/{id}`: Delete a movie by its ID.
 
 Path Parameters:
 
   id: The ID of the movie to delete.
 
-
 ## Examples
 
 - `GET /v1/movies`
-
 
 ```console
 curl localhost:8080/api/movies
@@ -149,7 +140,6 @@ Response body:
 		}
 	]
 }
-
 ```
 
 ```console
@@ -181,7 +171,6 @@ Response body:
 		}
 	]
 }
-
 ```
 
 
@@ -271,3 +260,10 @@ Response body:
 	}
 }
 ```
+
+### Authors
+
+- Maximilian Edison
+- Max Base
+
+Copyright 2023, Max Base
