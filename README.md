@@ -253,10 +253,10 @@ Response body:
 		"year": 2016,
 		"runtime": "107 mins",
 		"genres": [
-		"animation",
-		"adventure"
+			"animation",
+			"adventure"
 		],
-	"version": 1
+		"version": 1
 	}
 }
 ```
