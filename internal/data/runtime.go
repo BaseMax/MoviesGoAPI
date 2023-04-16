@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-var ErrInvalidRuntimeFormat = errors.New("invlid runtime format")
+var ErrInvalidRuntimeFormat = errors.New("invalid runtime format")
 
 type Runtime int32
 
@@ -32,12 +32,12 @@ func (r *Runtime) UnmarshalJSON(jsonValue []byte) error {
 		return ErrInvalidRuntimeFormat
 	}
 
-	r, err := strconv.ParseInt(parts[0], 10, 32)
+	i, err := strconv.ParseInt(parts[0], 10, 32)
 	if err != nil {
 		return ErrInvalidRuntimeFormat
 	}
 
-	*r = Runtime(r)
+	*r = Runtime(i)
 
 	return nil
 }
