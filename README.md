@@ -26,6 +26,12 @@ migrate -path=./migrations -database=$MOVIES_DB_DSN up
 go run ./cmd/api
 ```
 
+or you can run app in docker with following command:
+
+```console
+docker compose up
+```
+
 
 ## Endpoints
 
