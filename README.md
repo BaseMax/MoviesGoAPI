@@ -34,6 +34,15 @@ docker compose up
 
 ## Endpoints
 
+| Method | URL Pattern               | Action                                          |
+|--------|---------------------------|-------------------------------------------------|
+| GET    | /v1/healthcheck           | Show application health and version information |
+| GET    | /v1/movies                | Show the details of all movies                  |
+| GET    | /v1/movies/{id}           | Show a details of a specific movie              |
+| POST   | /v1/movies                | Create a new movie                              |
+| PATCH  | /v1/movies/{id}           | Update the details of a specific movie          |
+| DELETE | /v1/movies/{id}           | Delete a specific movie                         |
+
 1. Get Movies `GET /v1/movies`: Retrieve a list of movies. You can optionally specify query parameters to filter, paginate, and sort the results.
 
 Query Parameters:
