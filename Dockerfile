@@ -11,7 +11,7 @@ RUN go install github.com/jackc/tern@latest
 
 COPY . ./
 
-RUN go build -o ./cmd/api
+RUN go build ./cmd/api
 
 EXPOSE 8000
 
